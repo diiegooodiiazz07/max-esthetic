@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Esthetic Clinics | Las Palmas de Gran Canaria</title>
+  <meta name="description" content="Clínica de dermoestética avanzada, peelings químicos, Dermapen con exosomas, aparatología facial y spa en C. Galicia, Las Palmas.">
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans for modern luxury black/white aesthetics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            max: {
+              black: '#0A0A0A',
+              dark: '#141414',
+              surface: '#1E1E1E',
+              card: '#F8F9FA',
+              line: '#E5E7EB',
+              silver: '#9CA3AF',
+              accent: '#000000'
+            }
+          },
+          fontFamily: {
+            display: ['"Syne"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333333;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555555;
+    }
+
+    /* Floating WhatsApp Pulse */
+    @keyframes pulseShadow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+      }
+      50% {
+        box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+      }
+    }
+    .wa-pulse {
+      animation: pulseShadow 2.5s infinite;
+    }
+
+    /* Subtle hover zoom */
+    .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-zoom:hover .img-zoom {
+      transform: scale(1.06);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-max-black font-sans antialiased selection:bg-black selection:text-white">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+       ========================================== -->
+  <div class="bg-max-black text-white text-[11px] sm:text-xs py-2.5 px-4 text-center tracking-widest uppercase font-medium flex items-center justify-center gap-3 border-b border-white/10">
+    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <span>Promociones Exclusivas de Temporada · C. Galicia, 28 (Las Palmas) · Reserva tu cita</span>
+  </div>
+
+  <!-- ==========================================
+       STICKY NAVBAR
+       ========================================== -->
+  <nav id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-max-line transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo mimicking their stylized X MAX emblem -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-max-black text-white rounded-xl flex items-center justify-center font-display font-extrabold text-2xl tracking-tighter shadow-md group-hover:scale-105 transition-transform">
+          <span>X</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-xl sm:text-2xl font-extrabold tracking-tight text-max-black leading-none">MAX</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-neutral-500 font-semibold mt-0.5">ESTHETIC CLINICS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-neutral-700">
+        <a href="#promociones" class="hover:text-black transition-colors">Promos Destacadas</a>
+        <a href="#tratamientos" class="hover:text-black transition-colors">Tratamientos</a>
+        <a href="#resultados" class="hover:text-black transition-colors">Antes y Después</a>
+        <a href="#clinica" class="hover:text-black transition-colors">Instalaciones</a>
+        <a href="#contacto" class="hover:text-black transition-colors">Ubicación</a>
+      </div>
+
+      <!-- Quick Contact Actions -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="tel:+34605015770" class="text-xs font-semibold text-neutral-600 hover:text-black flex items-center gap-2 transition-colors">
+          <i class="fa-solid fa-phone text-black"></i>
+          <span>+34 605 01 57 70</span>
+        </a>
+        <a href="#reserva" class="px-5 py-3 rounded-full bg-max-black text-white hover:bg-neutral-800 text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-md hover:shadow-lg">
+          Pedir Cita
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="lg:hidden text-black p-2 focus:outline-none" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="lg:hidden max-h-0 overflow-hidden bg-white border-t border-max-line transition-all duration-300 ease-in-out px-6">
+      <div class="flex flex-col py-5 space-y-3.5 text-sm font-semibold tracking-wider uppercase text-neutral-800">
+        <a href="#promociones" onclick="toggleMobileMenu()" class="py-1.5 hover:text-black">Promos Destacadas</a>
+        <a href="#tratamientos" onclick="toggleMobileMenu()" class="py-1.5 hover:text-black">Tratamientos</a>
+        <a href="#resultados" onclick="toggleMobileMenu()" class="py-1.5 hover:text-black">Antes y Después</a>
+        <a href="#clinica" onclick="toggleMobileMenu()" class="py-1.5 hover:text-black">Instalaciones</a>
+        <a href="#contacto" onclick="toggleMobileMenu()" class="py-1.5 hover:text-black">Ubicación y Horario</a>
+        <div class="pt-3 flex flex-col gap-2.5">
+          <a href="tel:+34605015770" class="text-center py-2.5 rounded-full border border-black text-black text-xs font-bold uppercase tracking-wider">
+            Llamar: 605 01 57 70
+          </a>
+          <a href="#reserva" onclick="toggleMobileMenu()" class="text-center py-3 rounded-full bg-black text-white text-xs font-bold uppercase tracking-wider shadow">
+            Reservar Cita Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="relative pt-12 pb-20 lg:py-24 overflow-hidden bg-neutral-50 border-b border-max-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Copy -->
+        <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10 text-neutral-800 text-[11px] font-bold tracking-widest uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+            <span>Clínica de Estética Avanzada en Las Palmas</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-max-black leading-[1.12]">
+            Siéntete <span class="underline decoration-neutral-300 underline-offset-8">MAX</span>. Tecnología médica & bienestar facial y corporal.
+          </h1>
+
+          <p class="text-neutral-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
+            Especialistas en regeneración dérmica profunda, peelings químicos clínicos, Dermapen con exosomas, fototerapia, masajes terapéuticos y spa en pleno centro de Las Palmas.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#promociones" class="w-full sm:w-auto px-8 py-4 rounded-full bg-max-black hover:bg-neutral-800 text-white text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-xl hover:shadow-2xl text-center">
+              Ver Ofertas y Packs
+            </a>
+            <a href="https://wa.me/34605015770?text=Hola%20Max%20Esthetic,%20me%20gustaría%20solicitar%20información%20para%20una%20cita" 
+               target="_blank" 
+               rel="noopener"
+               class="w-full sm:w-auto px-7 py-4 rounded-full border border-black/20 hover:border-black text-black text-xs font-bold tracking-widest uppercase transition-all duration-300 text-center bg-white flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+              <span>WhatsApp Directo</span>
+            </a>
+          </div>
+
+          <!-- Fast Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-neutral-200 text-center lg:text-left">
+            <div>
+              <p class="font-display text-2xl font-bold text-max-black">4.6 ★</p>
+              <p class="text-[11px] uppercase tracking-wider text-neutral-500 font-semibold mt-0.5">En Google Maps</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold text-max-black">L-D</p>
+              <p class="text-[11px] uppercase tracking-wider text-neutral-500 font-semibold mt-0.5">11:00 a 20:00 h</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold text-max-black">C. Galicia 28</p>
+              <p class="text-[11px] uppercase tracking-wider text-neutral-500 font-semibold mt-0.5">Oficina 1E</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Imagery -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-black/5 bg-black aspect-[4/5] card-zoom">
+              <!-- Clinic visual representing modern high-tech aesthetics cabin -->
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Max Esthetic Clinics Tratamientos" 
+                   class="w-full h-full object-cover img-zoom"
+                   onerror="this.src='https://placehold.co/800x1000/141414/FFFFFF?text=Max+Esthetic+Clinics'">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+              <!-- Promo badge overlay -->
+              <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-black/10">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-neutral-500 block">Dermapen + Exosomas</span>
+                <span class="font-display text-xl font-extrabold text-black">120 € <span class="text-xs line-through text-neutral-400 font-normal">190€</span></span>
+              </div>
+
+              <!-- Bottom clinic details card -->
+              <div class="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-xl border border-black/10 flex items-center justify-between">
+                <div>
+                  <h4 class="font-display text-sm font-bold text-black uppercase tracking-tight">Cabinas de Alta Tecnología</h4>
+                  <p class="text-xs text-neutral-500 mt-0.5"><i class="fa-solid fa-location-dot text-black mr-1"></i> C. Galicia, 28 · Las Palmas</p>
+                </div>
+                <a href="#reserva" class="px-3.5 py-2 rounded-xl bg-black text-white text-[11px] font-bold tracking-wider uppercase hover:bg-neutral-800 transition-colors">
+                  Cita
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED PROMOTIONS SECTION (Real Ads)
+       ========================================== -->
+  <section id="promociones" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-neutral-500 font-bold">Ofertas Disponibles</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-max-black mt-2">
+            Promociones y Packs Activos
+          </h2>
+        </div>
+        <p class="text-neutral-500 text-xs sm:text-sm max-w-md mt-2 md:mt-0 font-normal">
+          Packs con descuentos directos listos para agendar directamente por WhatsApp o recepción.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Promo 1: Peeling + Dermapen con Exosomas (120€) -->
+        <div class="relative bg-neutral-900 text-white rounded-3xl p-7 flex flex-col justify-between overflow-hidden shadow-xl border border-neutral-800 group hover:-translate-y-1 transition-all duration-300">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-white/5 rounded-full blur-xl pointer-events-none"></div>
+          
+          <div>
+            <div class="inline-block px-3 py-1 rounded-full bg-white text-black text-[10px] font-extrabold tracking-widest uppercase mb-4">
+              Pack Más Vendido
+            </div>
+            <h3 class="font-display text-2xl font-bold mb-2">Peeling + Dermapen con Exosomas</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mb-6">
+              Regeneración celular profunda, atenúa cicatrices, manchas y estimula colágeno mediante microagujas indoloras y exosomas de máxima pureza.
+            </p>
+
+            <ul class="space-y-2 text-xs text-neutral-300 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Sesión completa de Peeling Químico</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Aplicación Dermapen con Exosomas</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Mascarilla calmante post-protocolo</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-800 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase text-neutral-400 block line-through">Antes 190 €</span>
+              <span class="font-display text-3xl font-extrabold text-white">120 €</span>
+            </div>
+            <button onclick="bookPromo('Pack Peeling + Dermapen con Exosomas (120€)')" class="px-4 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-bold uppercase tracking-wider transition-colors">
+              Reservar Pack
+            </button>
+          </div>
+        </div>
+
+        <!-- Promo 2: Antiarrugas de Expresión + Peeling (340€) -->
+        <div class="relative bg-neutral-50 text-max-black rounded-3xl p-7 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-xl border border-max-line group hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="inline-block px-3 py-1 rounded-full bg-black/10 text-black text-[10px] font-extrabold tracking-widest uppercase mb-4">
+              Pack Rejuvenecimiento Total
+            </div>
+            <h3 class="font-display text-2xl font-bold mb-2">Tratamiento Antiarrugas + Peeling</h3>
+            <p class="text-neutral-600 text-xs leading-relaxed mb-6">
+              Tratamiento facial completo enfocado en suavizar líneas de expresión (frente, entrecejo y patas de gallo) combinado con peeling para piel radiante.
+            </p>
+
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-black"></i> Abordaje integral frente, entrecejo y ojos</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-black"></i> 1 Peeling Químico de REGALO incluido</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-black"></i> Control y revisión dérmica</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-200 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase text-neutral-500 block">Precio Pack Promo</span>
+              <span class="font-display text-3xl font-extrabold text-black">340 €</span>
+            </div>
+            <button onclick="bookPromo('Tratamiento Antiarrugas + Peeling (340€)')" class="px-4 py-2.5 rounded-full bg-black hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors">
+              Reservar Pack
+            </button>
+          </div>
+        </div>
+
+        <!-- Promo 3: Carbón Detox Facial (59€) -->
+        <div class="relative bg-neutral-50 text-max-black rounded-3xl p-7 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-xl border border-max-line group hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="inline-block px-3 py-1 rounded-full bg-black/10 text-black text-[10px] font-extrabold tracking-widest uppercase mb-4">
+              Higiene Médica Flash
+            </div>
+            <h3 class="font-display text-2xl font-bold mb-2">Tratamiento Carbón Detox</h3>
+            <p class="text-neutral-600 text-xs leading-relaxed mb-6">
+              Desintoxicación profunda de poros, purificación celular y efecto matificante inmediato con carbón activo y fototerapia clínica.
+            </p>
+
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-black"></i> Dermoabrasión suave con punta de diamante</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-black"></i> Fototerapia LED biológica</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-black"></i> Mascarilla purificante Carbón Activo</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-200 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase text-neutral-500 block">Sesión Completa</span>
+              <span class="font-display text-3xl font-extrabold text-black">59 €</span>
+            </div>
+            <button onclick="bookPromo('Tratamiento Carbón Detox (59€)')" class="px-4 py-2.5 rounded-full bg-black hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors">
+              Reservar Pack
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TREATMENT CATALOG (Filterable)
+       ========================================== -->
+  <section id="tratamientos" class="py-20 bg-neutral-100 border-y border-max-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-neutral-500 font-bold">Catálogo Clínico</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-max-black mt-1">
+          Nuestros Tratamientos en Las Palmas
+        </h2>
+        <p class="text-neutral-600 text-xs sm:text-sm mt-2">
+          Selecciona una categoría para explorar los protocolos disponibles en nuestra clínica.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button onclick="filterServices('todos')" class="svc-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-black text-white transition-all shadow-sm" data-category="todos">
+          Todos
+        </button>
+        <button onclick="filterServices('facial')" class="svc-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-neutral-800 hover:bg-black hover:text-white transition-all shadow-sm" data-category="facial">
+          Facial & Peeling
+        </button>
+        <button onclick="filterServices('spa')" class="svc-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-neutral-800 hover:bg-black hover:text-white transition-all shadow-sm" data-category="spa">
+          Spa & Masajes
+        </button>
+        <button onclick="filterServices('aparatologia')" class="svc-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-neutral-800 hover:bg-black hover:text-white transition-all shadow-sm" data-category="aparatologia">
+          Aparatología & Firmeza
+        </button>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
+        
+        <!-- Item 1: Peeling -->
+        <div class="svc-card bg-white rounded-3xl overflow-hidden border border-max-line shadow-sm hover:shadow-lg transition-all p-6 flex flex-col justify-between" data-category="facial">
+          <div>
+            <div class="h-48 rounded-2xl overflow-hidden mb-5 relative">
+              <img src="https://images.unsplash.com/photo-1512290900672-1f4a9b6cfa95?auto=format&fit=crop&w=600&q=80" 
+                   alt="Peeling Químico Facial" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-white/95 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-black">
+                Facial
+              </span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Peeling Químico Médico-Estético</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed mb-4">
+              Eliminación de capas superficiales envejecidas, unificación del tono, reducción de poros abiertos y regeneración dérmica inmediata.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-black">Sesión Individual</span>
+            <button onclick="bookService('Peeling Químico Facial')" class="px-3.5 py-1.5 rounded-full bg-neutral-100 hover:bg-black hover:text-white text-xs font-bold uppercase transition-colors">
+              Pedir Cita
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 2: Dermapen Exosomas -->
+        <div class="svc-card bg-white rounded-3xl overflow-hidden border border-max-line shadow-sm hover:shadow-lg transition-all p-6 flex flex-col justify-between" data-category="facial">
+          <div>
+            <div class="h-48 rounded-2xl overflow-hidden mb-5 relative">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" 
+                   alt="Dermapen con Exosomas" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-white/95 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-black">
+                Facial Avanzado
+              </span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Dermapen con Exosomas</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed mb-4">
+              Microagujas estériles que introducen factores de crecimiento y exosomas en profundidad para estimular nuevo colágeno y elastina.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-black">En Promo 120 €</span>
+            <button onclick="bookService('Dermapen con Exosomas')" class="px-3.5 py-1.5 rounded-full bg-neutral-100 hover:bg-black hover:text-white text-xs font-bold uppercase transition-colors">
+              Pedir Cita
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 3: Spa & Masajes -->
+        <div class="svc-card bg-white rounded-3xl overflow-hidden border border-max-line shadow-sm hover:shadow-lg transition-all p-6 flex flex-col justify-between" data-category="spa">
+          <div>
+            <div class="h-48 rounded-2xl overflow-hidden mb-5 relative">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" 
+                   alt="Masajes Spa Relajantes" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-white/95 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-black">
+                Spa & Masajes
+              </span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Masajes Relajantes & Descontracturantes</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed mb-4">
+              Técnicas manuales con aceites esenciales para alivio de sobrecargas musculares, estrés tensional y recuperación física integral.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-black">Desde 45 €</span>
+            <button onclick="bookService('Masaje Relajante / Spa')" class="px-3.5 py-1.5 rounded-full bg-neutral-100 hover:bg-black hover:text-white text-xs font-bold uppercase transition-colors">
+              Pedir Cita
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 4: Carbón Detox -->
+        <div class="svc-card bg-white rounded-3xl overflow-hidden border border-max-line shadow-sm hover:shadow-lg transition-all p-6 flex flex-col justify-between" data-category="facial">
+          <div>
+            <div class="h-48 rounded-2xl overflow-hidden mb-5 relative">
+              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80" 
+                   alt="Tratamiento Carbón Activo" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-white/95 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-black">
+                Facial Detox
+              </span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Higiene Dermoabrasión & Carbón Detox</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed mb-4">
+              Limpieza profunda con punta de diamante, fototerapia LED revitalizante y mascarilla de carbón activo purificante.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-black">Promo 59 €</span>
+            <button onclick="bookService('Carbón Detox')" class="px-3.5 py-1.5 rounded-full bg-neutral-100 hover:bg-black hover:text-white text-xs font-bold uppercase transition-colors">
+              Pedir Cita
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 5: Aparatología Reafirmante -->
+        <div class="svc-card bg-white rounded-3xl overflow-hidden border border-max-line shadow-sm hover:shadow-lg transition-all p-6 flex flex-col justify-between" data-category="aparatologia">
+          <div>
+            <div class="h-48 rounded-2xl overflow-hidden mb-5 relative">
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" 
+                   alt="Radiofrecuencia y Aparatología Facial" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-white/95 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-black">
+                Aparatología
+              </span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Pack Reafirmante & Radiofrecuencia</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed mb-4">
+              Tensión cutánea, reactivación de fibroblastos y remodelación facial no invasiva para combatir la flacidez del óvalo y cuello.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-black">Consultar Sesiones</span>
+            <button onclick="bookService('Pack Reafirmante Aparatología')" class="px-3.5 py-1.5 rounded-full bg-neutral-100 hover:bg-black hover:text-white text-xs font-bold uppercase transition-colors">
+              Pedir Cita
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 6: Masaje Spa Espalda -->
+        <div class="svc-card bg-white rounded-3xl overflow-hidden border border-max-line shadow-sm hover:shadow-lg transition-all p-6 flex flex-col justify-between" data-category="spa">
+          <div>
+            <div class="h-48 rounded-2xl overflow-hidden mb-5 relative">
+              <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=600&q=80" 
+                   alt="Spa y bienestar corporal" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-white/95 px-3 py-1 rounded-full text-[10px] font-bold uppercase text-black">
+                Bienestar
+              </span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Sesión Spa & Drenaje Linfático</h3>
+            <p class="text-neutral-500 text-xs leading-relaxed mb-4">
+              Drenaje circulatorio corporal para eliminar retención de líquidos, toxinas y sensación de pesadez corporal.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-black">Desde 50 €</span>
+            <button onclick="bookService('Spa & Drenaje')" class="px-3.5 py-1.5 rounded-full bg-neutral-100 hover:bg-black hover:text-white text-xs font-bold uppercase transition-colors">
+              Pedir Cita
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BEFORE / AFTER COMPARISON SLIDER
+       ========================================== -->
+  <section id="resultados" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs uppercase tracking-[0.25em] text-neutral-500 font-bold">Resultados Reales</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-max-black leading-tight">
+            Evolución Visible en Textura y Luminosidad Dérmica
+          </h2>
+          <p class="text-neutral-600 text-sm leading-relaxed">
+            Nuestros protocolos combinan la precisión de los peelings clínicos y el estímulo celular con Dermapen para restaurar la uniformidad de la piel sin alterar tus rasgos naturales.
+          </p>
+          
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3 text-xs text-neutral-700">
+              <i class="fa-solid fa-circle-check text-black"></i>
+              <span>Atenuación de manchas y daño solar</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-neutral-700">
+              <i class="fa-solid fa-circle-check text-black"></i>
+              <span>Cierre de poros dilatados y reducción de marcas</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-neutral-700">
+              <i class="fa-solid fa-circle-check text-black"></i>
+              <span>Efecto Glow inmediato y textura aterciopelada</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-neutral-100 text-xs text-neutral-600 flex items-center gap-3">
+            <i class="fa-solid fa-arrows-left-right text-black text-base"></i>
+            <span>Arrastra el cursor para comparar el estado previo y post-tratamiento.</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-neutral-100 p-4 sm:p-6 rounded-3xl border border-max-line shadow-xl">
+            
+            <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden select-none cursor-ew-resize" id="comparisonBox">
+              
+              <!-- After (Background) -->
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Resultado Después" 
+                   class="absolute inset-0 w-full h-full object-cover">
+              
+              <span class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-black text-white text-[11px] font-bold tracking-wider uppercase">
+                Después (Sesión 2)
+              </span>
+
+              <!-- Before (Clipped) -->
+              <div id="beforeMask" class="absolute inset-y-0 left-0 overflow-hidden w-1/2 border-r-2 border-white shadow-xl">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80" 
+                     alt="Estado Antes" 
+                     class="absolute inset-0 w-full h-full object-cover max-w-none" 
+                     id="beforeImg">
+                
+                <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-white text-black text-[11px] font-bold tracking-wider uppercase shadow">
+                  Antes (Sesión 1)
+                </span>
+              </div>
+
+              <!-- Slider Thumb -->
+              <div id="sliderPin" class="absolute top-0 bottom-0 left-1/2 -ml-4 w-8 flex items-center justify-center pointer-events-none z-20">
+                <div class="w-8 h-8 rounded-full bg-white text-black shadow-2xl flex items-center justify-center border border-neutral-300 text-xs">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-3 text-center text-xs text-neutral-500">
+              Protocolo: Peeling Químico + Dermapen con Exosomas (Max Esthetic Clinics)
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE CLINIC / CABINS SHOWCASE
+       ========================================== -->
+  <section id="clinica" class="py-20 bg-neutral-950 text-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-neutral-400 font-bold">Nuestras Cabinas</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-1">
+          Espacios Diseñados para tu Privacidad y Confort
+        </h2>
+        <p class="text-neutral-400 text-xs sm:text-sm mt-2">
+          Higiene clínica rigurosa, aparatología de última generación y toallas personalizadas Max Esthetic.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 p-5 space-y-4">
+          <div class="h-52 rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" 
+                 alt="Cabina de Tratamientos" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-bold">Cabinas Clínicas Suites</h4>
+            <p class="text-neutral-400 text-xs mt-1">Camillas ergonómicas higienizadas para protocolos faciales y peelings químicos.</p>
+          </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 p-5 space-y-4">
+          <div class="h-52 rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1512290903028-1ef98bb4b531?auto=format&fit=crop&w=800&q=80" 
+                 alt="Aparatología Fototerapia" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-bold">Fototerapia & Dermocosmética</h4>
+            <p class="text-neutral-400 text-xs mt-1">Sistemas de luz biológica para activar la regeneración tisular sin dolor.</p>
+          </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 p-5 space-y-4 sm:col-span-2 lg:col-span-1">
+          <div class="h-52 rounded-2xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" 
+                 alt="Zona Relax y Masajes" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-display text-lg font-bold">Atmósfera de Spa & Masajes</h4>
+            <p class="text-neutral-400 text-xs mt-1">Ambiente cálido y relajante para desconectar del ritmo diario en Las Palmas.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       APPOINTMENT FORM WITH DIRECT WHATSAPP ACTION
+       ========================================== -->
+  <section id="reserva" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8">
+      
+      <div class="bg-neutral-50 rounded-3xl p-8 sm:p-12 border border-max-line shadow-xl">
+        
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs uppercase tracking-[0.25em] text-neutral-500 font-bold">Agendado Rápido</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-max-black mt-1">
+            Reserva tu Cita en Max Esthetic
+          </h2>
+          <p class="text-neutral-600 text-xs sm:text-sm mt-2">
+            Rellena tus datos y al pulsar se abrirá tu WhatsApp con el mensaje ya estructurado para el equipo de la clínica.
+          </p>
+        </div>
+
+        <form id="clinicForm" onsubmit="sendViaWhatsApp(event)" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <div>
+              <label for="nameInput" class="block text-xs uppercase font-bold text-neutral-700 mb-2">Nombre y Apellidos *</label>
+              <input type="text" id="nameInput" required placeholder="Tu nombre completo" 
+                     class="w-full px-4 py-3.5 rounded-2xl bg-white border border-neutral-300 focus:border-black focus:outline-none text-sm text-black">
+            </div>
+
+            <div>
+              <label for="phoneInput" class="block text-xs uppercase font-bold text-neutral-700 mb-2">Teléfono de Contacto *</label>
+              <input type="tel" id="phoneInput" required placeholder="Ej. 600 000 000" 
+                     class="w-full px-4 py-3.5 rounded-2xl bg-white border border-neutral-300 focus:border-black focus:outline-none text-sm text-black">
+            </div>
+
+            <div>
+              <label for="serviceField" class="block text-xs uppercase font-bold text-neutral-700 mb-2">Tratamiento o Promo *</label>
+              <select id="serviceField" required class="w-full px-4 py-3.5 rounded-2xl bg-white border border-neutral-300 focus:border-black focus:outline-none text-sm text-black cursor-pointer">
+                <option value="Pack Peeling + Dermapen con Exosomas (120€)">Pack Peeling + Dermapen con Exosomas (120€)</option>
+                <option value="Tratamiento Antiarrugas + Peeling (340€)">Tratamiento Antiarrugas + Peeling (340€)</option>
+                <option value="Tratamiento Carbón Detox (59€)">Tratamiento Carbón Detox (59€)</option>
+                <option value="Peeling Químico Facial">Peeling Químico Facial</option>
+                <option value="Masaje Relajante / Spa Corporal">Masaje Relajante / Spa Corporal</option>
+                <option value="Pack Reafirmante & Aparatología">Pack Reafirmante & Aparatología</option>
+                <option value="Valoración y Diagnóstico Inicial">Primera Valoración y Diagnóstico</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="dateField" class="block text-xs uppercase font-bold text-neutral-700 mb-2">Fecha y Turno Deseado</label>
+              <input type="text" id="dateField" placeholder="Ej. Mañana por la tarde / Lunes 17:00" 
+                     class="w-full px-4 py-3.5 rounded-2xl bg-white border border-neutral-300 focus:border-black focus:outline-none text-sm text-black">
+            </div>
+
+          </div>
+
+          <div>
+            <label for="commentField" class="block text-xs uppercase font-bold text-neutral-700 mb-2">¿Algún comentario adicional? (Opcional)</label>
+            <textarea id="commentField" rows="3" placeholder="Cuéntanos tus objetivos o cualquier duda previa..." 
+                      class="w-full px-4 py-3.5 rounded-2xl bg-white border border-neutral-300 focus:border-black focus:outline-none text-sm text-black"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-xl flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Pedir Cita por WhatsApp (+34 605 01 57 70)</span>
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       LOCATION & SCHEDULE SECTION
+       ========================================== -->
+  <section id="contacto" class="py-20 bg-neutral-100 border-t border-max-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Contact Details -->
+        <div class="lg:col-span-6 space-y-8">
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] text-neutral-500 font-bold">Localización</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-max-black mt-1 mb-3">
+              ¿Dónde está Max Esthetic Clinics?
+            </h2>
+            <p class="text-neutral-600 text-sm leading-relaxed">
+              En pleno centro de Las Palmas de Gran Canaria, en una zona accesible y con todas las comodidades para tus sesiones de estética y relajación.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center flex-shrink-0 text-lg">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h4 class="font-display text-base font-bold text-black">Dirección en Las Palmas</h4>
+                <p class="text-xs text-neutral-600">C. Galicia, 28, oficina 1e, 35006 Las Palmas de Gran Canaria, Las Palmas, España</p>
+                <a href="https://maps.google.com/?q=C.+Galicia,+28,+oficina+1e,+35006+Las+Palmas+de+Gran+Canaria" target="_blank" rel="noopener" class="text-xs text-black font-bold underline mt-1 inline-block hover:text-neutral-600">
+                  Abrir en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center flex-shrink-0 text-lg">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="font-display text-base font-bold text-black">Horario de Apertura</h4>
+                <p class="text-xs text-neutral-600">Lunes a Domingo: <strong>11:00 - 20:00 h</strong></p>
+                <p class="text-[11px] text-neutral-500">Atención personalizada bajo cita previa</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center flex-shrink-0 text-lg">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <h4 class="font-display text-base font-bold text-black">Teléfono & WhatsApp</h4>
+                <p class="text-xs text-neutral-600">+34 605 01 57 70</p>
+                <p class="text-[11px] text-neutral-500">Respondemos con rapidez a consultas sobre tratamientos</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Google Map / Route Embed -->
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden border border-neutral-300 shadow-xl bg-white aspect-[16/11] relative">
+            <iframe 
+              title="Ubicación Max Esthetic Clinics"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.0345100000003!2d-15.43265!3d28.13285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4095819917ef79%3A0x17589a1fe1b74cc4!2sC.%20Galicia%2C%2028%2C%2035006%20Las%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-neutral-200 flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs font-bold text-black">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Max Esthetic Clinics · Oficina 1E</span>
+              </div>
+              <a href="https://maps.google.com/?q=C.+Galicia,+28,+oficina+1e,+35006+Las+Palmas+de+Gran+Canaria" target="_blank" rel="noopener" class="text-[11px] font-bold uppercase text-black hover:underline">
+                Ruta <i class="fa-solid fa-diamond-turn-right ml-0.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FLOATING WHATSAPP BUTTON (+34605015770)
+       ========================================== -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    <div class="hidden sm:flex bg-white px-3.5 py-1.5 rounded-2xl shadow-lg border border-neutral-200 text-xs font-semibold text-black items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span>¿Pedir cita? <strong>605 01 57 70</strong></span>
+    </div>
+
+    <a href="https://wa.me/34605015770?text=Hola%20Max%20Esthetic,%20me%20gustaría%20solicitar%20información%20para%20una%20cita%20en%20C.%20Galicia" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Contactar por WhatsApp a Max Esthetic Clinics"
+       class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-all duration-300 wa-pulse">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-max-black text-white pt-16 pb-12 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-neutral-800 text-xs text-neutral-400">
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-white text-black rounded-lg flex items-center justify-center font-display font-extrabold text-xl">
+              X
+            </div>
+            <span class="font-display text-xl font-bold tracking-tight text-white">MAX ESTHETIC</span>
+          </div>
+          <p class="leading-relaxed">
+            Centro de dermoestética, peeling químico, exosomas y bienestar corporal en Las Palmas de Gran Canaria.
+          </p>
+          <p class="text-neutral-300">C. Galicia, 28, oficina 1e · 35006 Las Palmas</p>
+        </div>
+
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Promos Destacadas</h5>
+          <ul class="space-y-2">
+            <li><a href="#promociones" class="hover:text-white">Peeling + Dermapen Exosomas (120€)</a></li>
+            <li><a href="#promociones" class="hover:text-white">Tratamiento Antiarrugas + Peeling (340€)</a></li>
+            <li><a href="#promociones" class="hover:text-white">Tratamiento Carbón Detox (59€)</a></li>
+            <li><a href="#tratamientos" class="hover:text-white">Pack Reafirmante</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Contacto Directo</h5>
+          <ul class="space-y-2">
+            <li>Teléfono: +34 605 01 57 70</li>
+            <li>WhatsApp: +34 605 01 57 70</li>
+            <li>Horario: Lunes a Domingo 11:00 - 20:00</li>
+            <li>Las Palmas de Gran Canaria</li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Redes Sociales</h5>
+          <p class="mb-3">Síguenos en Instagram y consulta testimonios de nuestras pacientes.</p>
+          <div class="flex items-center gap-3 text-sm">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-black flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/34605015770" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <p>© 2026 Max Esthetic Clinics - Las Palmas. Propuesta de diseño web profesional.</p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="hover:text-neutral-300">Aviso Legal</a>
+          <a href="#" class="hover:text-neutral-300">Privacidad</a>
+          <a href="#" class="hover:text-neutral-300">Cookies</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       INTERACTIVE JAVASCRIPT LOGIC
+       ========================================== -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function toggleMobileMenu() {
+      const isOpen = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+      if (isOpen) {
+        mobileMenu.style.maxHeight = '0px';
+        menuIcon.classList.replace('fa-xmark', 'fa-bars');
+      } else {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        menuIcon.classList.replace('fa-bars', 'fa-xmark');
+      }
+    }
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // 2. Services Filter Tabs
+    function filterServices(category) {
+      const buttons = document.querySelectorAll('.svc-btn');
+      const cards = document.querySelectorAll('.svc-card');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.classList.add('bg-black', 'text-white');
+          btn.classList.remove('bg-white', 'text-neutral-800');
+        } else {
+          btn.classList.remove('bg-black', 'text-white');
+          btn.classList.add('bg-white', 'text-neutral-800');
+        }
+      });
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'todos' || cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. Quick Booking from Cards
+    function bookPromo(promoName) {
+      const select = document.getElementById('serviceField');
+      if (select) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.toLowerCase().includes(promoName.toLowerCase().substring(0, 10))) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      document.getElementById('reserva').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function bookService(serviceName) {
+      bookPromo(serviceName);
+    }
+
+    // 4. WhatsApp Direct Appointment Sender
+    function sendViaWhatsApp(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('nameInput').value.trim();
+      const phone = document.getElementById('phoneInput').value.trim();
+      const service = document.getElementById('serviceField').value;
+      const date = document.getElementById('dateField').value.trim() || 'A consultar';
+      const comment = document.getElementById('commentField').value.trim();
+
+      let message = `¡Hola Max Esthetic Clinics! 👋%0A%0A`;
+      message += `Me gustaría solicitar una cita:%0A`;
+      message += `• *Nombre:* ${encodeURIComponent(name)}%0A`;
+      message += `• *Teléfono:* ${encodeURIComponent(phone)}%0A`;
+      message += `• *Tratamiento:* ${encodeURIComponent(service)}%0A`;
+      message += `• *Horario deseado:* ${encodeURIComponent(date)}%0A`;
+      if (comment) {
+        message += `• *Nota:* ${encodeURIComponent(comment)}%0A`;
+      }
+      message += `%0A¿Tienen disponibilidad? Gracias.`;
+
+      // Clinic real WhatsApp number: +34 605 01 57 70
+      const targetUrl = `https://wa.me/34605015770?text=${message}`;
+      window.open(targetUrl, '_blank');
+    }
+
+    // 5. Interactive Before/After Slider
+    const comparisonBox = document.getElementById('comparisonBox');
+    const beforeMask = document.getElementById('beforeMask');
+    const sliderPin = document.getElementById('sliderPin');
+    const beforeImg = document.getElementById('beforeImg');
+
+    let dragging = false;
+
+    function moveSlider(clientX) {
+      const rect = comparisonBox.getBoundingClientRect();
+      let pos = clientX - rect.left;
+      if (pos < 0) pos = 0;
+      if (pos > rect.width) pos = rect.width;
+      
+      const pct = (pos / rect.width) * 100;
+      beforeMask.style.width = pct + '%';
+      sliderPin.style.left = pct + '%';
+    }
+
+    function syncBeforeDimensions() {
+      if (comparisonBox && beforeImg) {
+        beforeImg.style.width = comparisonBox.offsetWidth + 'px';
+        beforeImg.style.height = comparisonBox.offsetHeight + 'px';
+      }
+    }
+
+    window.addEventListener('resize', syncBeforeDimensions);
+    window.addEventListener('DOMContentLoaded', syncBeforeDimensions);
+
+    comparisonBox.addEventListener('mousedown', (e) => {
+      dragging = true;
+      moveSlider(e.clientX);
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!dragging) return;
+      moveSlider(e.clientX);
+    });
+    window.addEventListener('mouseup', () => { dragging = false; });
+
+    comparisonBox.addEventListener('touchstart', (e) => {
+      dragging = true;
+      moveSlider(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      moveSlider(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchend', () => { dragging = false; });
+  </script>
+
+</body>
+</html>
